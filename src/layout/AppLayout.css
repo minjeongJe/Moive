@@ -1,0 +1,44 @@
+.Navbar {
+  background-color: #000000; 
+  color: #ffffff;
+}
+
+.Navbar .nav-link{
+  color: #ffffff;
+
+  &:hover {
+    color: lightgray;
+  }
+}
+
+.Navbar .btn {
+  border-color: red;
+  color: red;
+
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.692);
+    border-color: lightgray;
+  }
+} 
+
+/* 로고 */
+.navbar-logo {
+  width: 150px;
+  height: 80px;
+  margin-left: 20px;
+} 
+
+/* 검색 영역 */
+.navbar-search-area {
+  margin-right: 20px;
+}
+
+/* 사이드메뉴 및 검색영역 */
+.navbar-toggler-icon {
+  border-radius: 1px;
+  background-color: rgba(161, 161, 161, 0.61); 
+}
+
+.offcanvas-header {
+  color: rgba(255, 0, 0, 0.692);
+}
