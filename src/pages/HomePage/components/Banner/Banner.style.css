@@ -1,0 +1,72 @@
+.banner{
+    height: 56vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.692),transparent);
+        position: absolute;
+        left: 0;
+        height: 56vh;
+        width: 100%;
+    }
+}
+
+.banner-text-area {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.banner-text-area h1 {
+    white-space: nowrap;
+}
+
+.banner-text-area > * {
+    z-index: 2;
+}
+
+/* 로딩 스피너 */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.spinner-border {
+    color: #fff;
+}
+
+@media (max-width:768px) {
+    .banner-text-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; 
+        padding: 1.2rem;
+    }
+
+    .banner-text-area h1 {
+        width: 300px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .banner-text-area p {
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    .banner-text-area {
+        opacity: 0; 
+        visibility: hidden; 
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out; 
+    }
+}
