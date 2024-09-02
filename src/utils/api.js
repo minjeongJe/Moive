@@ -7,6 +7,9 @@ const api = axios.create({
   headers: {
     Authorization: `Bearer  ${API_KEY}`,
   },
+  params: {
+    language: 'ko-KR', 
+  },
 });
 
 

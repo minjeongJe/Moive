@@ -3,10 +3,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 80px;
 
     &::before {
         content: '';
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.692),transparent);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.966),transparent);
         position: absolute;
         left: 0;
         height: 56vh;
@@ -26,6 +27,8 @@
 
 .banner-text-area h1 {
     white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .banner-text-area > * {
@@ -45,6 +48,10 @@
 }
 
 @media (max-width:768px) {
+    .banner {
+        margin-bottom: 50px;
+    }
+
     .banner-text-area {
         display: flex;
         flex-direction: column;
