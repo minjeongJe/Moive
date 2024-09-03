@@ -2,8 +2,28 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import './MovieCard.style.css'
+import { useMovieGenreQuery } from '../../Hook/useMovieGenre';
 
 const MovieCard = ({ movie }) => {
+  const { data: genreData } = useMovieGenreQuery();
+  // console.log("ggg", genreData);
+
+  const showGenre = (genreIdList) => {
+    if (!genreIdList) return [];
+    
+    // genreData가 로드되지 않았거나 빈 배열일 경우 처리
+    if (!genreData || genreData.length === 0) {
+      return ["Unknown"];
+    }
+
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj ? genreObj.name : "Unknown"; // 장르가 없을 경우 "Unknown" 반환
+    });
+
+    return genreNameList;
+  }
+
   return (
     <div style={{backgroundImage: 
     "url("+
@@ -15,8 +35,9 @@ const MovieCard = ({ movie }) => {
       <div className='overlay'>
         <div>
           <h1>{movie.title}</h1>
-          <div>{movie.genre_ids.map((id) => (
-            <span className="badge rounded-pill text-bg-danger">{id}</span>
+          <div className='movie-genre'>
+            {showGenre(movie.genre_ids).map((id) => (
+            <div className="badge rounded-pill text-bg-danger">{id}</div>
           ))}
           </div>
         </div>

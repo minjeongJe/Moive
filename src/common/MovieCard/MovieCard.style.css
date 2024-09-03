@@ -33,10 +33,17 @@
   z-index: 2;
 }
 
+
 .overlay h1 {
   font-size: 25px;
   font-weight: 800;
   margin-bottom: 40px;
+}
+
+.movie-genre  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px; 
 }
 
 .badge {
@@ -83,6 +90,13 @@
   .movie-card {
       width: 200px;
       height: 300px;
+  }
+}
+
+@media (max-width: 1370px) {
+  .movie-card {
+      width: 190px;
+      height: 280px;
   }
 }
 
