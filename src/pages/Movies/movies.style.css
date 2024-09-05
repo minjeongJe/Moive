@@ -1,0 +1,51 @@
+.dropdown-menu-custom-width {
+  width: 300px; 
+  max-height: 200px; 
+  overflow-y: auto;
+}
+
+.genre-dropBtn {
+    margin: 0 0 40px 10px;
+}
+
+.movie-card {
+    margin: 30px 10px;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination .page-item .page-link {
+  background-color: transparent;
+  color: #dd3939bd;
+  border: none;
+  font-weight: 700;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: #dd3939bd;
+  color: #fff;
+  border: none;
+}
+
+
+.pagination .page-item .page-link:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.pagination .page-item .page-link:active {
+  outline: none;
+  border: none;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #dd3939bd;
+  color: #fff;
+  outline: none;
+  border: none;
+}

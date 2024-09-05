@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -10,13 +10,23 @@ import { useNavigate } from 'react-router-dom';
 import './AppLayout.css';
 
 const AppLayout = () => {
-    const navigate = useNavigate();
-    const goToHome = () => {
-        navigate('/')
-    }
-    const goToMovies = () => {
-        navigate('/movies')
-    }
+  const [keyword, setKeyword] = useState("");
+  const navigate = useNavigate();
+
+  const searchByKeyword = (event) => {
+    event.preventDefault();
+    //url 바꿔주기
+    navigate(`/movies?q=${keyword}`);
+  };
+
+  const goToHome = () => {
+    navigate('/')
+  }
+
+  const goToMovies = () => {
+    navigate('/movies')
+  }
+
   const expand = 'lg';
 
   return (
@@ -47,14 +57,17 @@ const AppLayout = () => {
                 <Nav.Link href="/" onClick={goToHome}>Home</Nav.Link>
                 <Nav.Link href="/movies" onClick={goToMovies}>Movies</Nav.Link>
               </Nav>
-              <Form className="d-flex navbar-search-area">
+              <Form className="d-flex navbar-search-area" onSubmit={searchByKeyword}>
                 <Form.Control
                   type="search"
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
+                  value={keyword}
+                  onChange={ (event) => setKeyword
+                      (event.target.value)}
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="outline-success" type="submit">Search</Button>
               </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
