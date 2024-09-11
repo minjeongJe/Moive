@@ -12,11 +12,11 @@
 }
 
 .Navbar .btn {
-  border-color: red;
-  color: red;
+  border-color: rgba(255, 0, 0, 0.651);
+  color: rgba(255, 0, 0, 0.651);
 
   &:hover {
-    background-color: rgba(255, 0, 0, 0.692);
+    background-color: rgba(255, 0, 0, 0.651);
     border-color: lightgray;
   }
 } 

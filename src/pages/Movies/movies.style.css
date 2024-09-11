@@ -1,15 +1,47 @@
-.dropdown-menu-custom-width {
+.movies-container,
+.movies-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 장르 드롭다운 */
+#movies-area {
+  #dropdown-basic-button  {
+    width: 158px;
+    background-color: rgba(255, 0, 0, 0.651);
+    border: none;
+  }
+
+  .dropdown-menu {
+    background-color: rgba(220, 220, 220, 0.925);
+  }
+
+  #dropdown-button {
+    background-color: black;
+    border: none;
+  }
+
+}
+
+/* .dropdown-menu-custom-width {
   width: 300px; 
   max-height: 200px; 
   overflow-y: auto;
-}
+  border-radius: 10px;
+} */
 
 .genre-dropBtn {
-    margin: 0 0 40px 10px;
+  margin: 0 0 40px 10px;
 }
 
 .movie-card {
-    margin: 30px 10px;
+  margin: 30px 10px;
+}
+ 
+.movie-no-data {
+  margin-top: 20px;
 }
 
 /* 페이지네이션 */

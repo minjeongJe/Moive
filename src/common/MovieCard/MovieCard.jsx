@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import './MovieCard.style.css'
 import { useMovieGenreQuery } from '../../Hook/useMovieGenre';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
@@ -24,13 +25,19 @@ const MovieCard = ({ movie }) => {
     return genreNameList;
   }
 
+  //해당영화 포스터 클릭 시 영화 디테일페이지 이동.
+  const navigate = useNavigate();
+  const goToDetailPage = () => {
+    navigate(`/movies/${movie.id}`)
+  }
+
   return (
     <div style={{backgroundImage: 
     "url("+
     `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`+
     ")",
     }}
-    className='movie-card'
+    className='movie-card' onClick={goToDetailPage}
     >
       <div className='overlay'>
         <div>

@@ -1,0 +1,12 @@
+* {
+    color: #fff;
+}
+
+.movie-detail-area {
+    display: flex;
+}
+
+.movie-poster {
+    width: 40%;
+    height: 100%;
+}

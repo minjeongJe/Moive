@@ -1,4 +1,23 @@
 .text-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding: 30px;
-    color: #fff;
+  color: #fff;
+  margin-top: 60px;
+}
+
+.text-center h1 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.text-center div {
+  font-size: 20px;
+  color: rgba(255, 0, 0, 0.801);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 }
