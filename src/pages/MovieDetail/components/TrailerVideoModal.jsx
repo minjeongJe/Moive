@@ -25,9 +25,6 @@ const TrailerVideoModal = ({ movieId, ...props }) => {
                     )}
                 </div>
             </Modal.Body>
-            <Modal.Footer>
-                <Button variant="danger" onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
         </Modal>
     );
 };
