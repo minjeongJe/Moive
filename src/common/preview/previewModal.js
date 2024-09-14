@@ -1,4 +1,0 @@
-
-
-import './previewModal.style.css';
- 

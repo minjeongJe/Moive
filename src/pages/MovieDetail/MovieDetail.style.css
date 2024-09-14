@@ -1,3 +1,61 @@
+button {
+  cursor: pointer;
+}
+
+.movie-detail-area {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+/* 리뷰 및 추천영화영역 */
+.bottom-contents {
+  position: relative;
+  margin-top: 40px;
+  z-index: 20;
+}
+
+.bottom-contents .content-nav {
+  margin-bottom: 40px;
+}
+
+.content-nav {
+  position: relative;
+  overflow: hidden;
+  width: 1240px;
+  margin: 0 auto 20px;
+}
+
+.content-nav ul {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #2f2f2f;
+  font-size: 0;
+}
+
+.content-nav ul li {
+  vertical-align: middle;
+}
+
+.content-nav ul li + li {
+  margin-left: 20px;
+}
+
+.content-nav ul li button {
+  display: inline-block;
+  padding: 0 10px;
+  border-bottom: 4px solid transparent;
+  font-size: 18px;
+  color: #a5a5a5;
+  line-height: 63px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.content-nav ul li button.on {
+  border-bottom-color: #f9bc13;
+  color: #fff;
+}
+
 * {
     color: #fff;
 }
@@ -9,4 +67,52 @@
 .movie-poster {
     width: 40%;
     height: 100%;
+}
+
+/* 영화 정보 */
+.no-trailer {
+  color: black;
+}
+
+.Movie-items {
+  margin-left: 30px;
+}
+
+.movie-tittle {
+  margin: 30px 0;
+}
+
+.Movie-data {
+  margin-bottom: 20px;
+}
+
+.movie-genre {
+  margin-right: 10px;
+}
+
+.movie-overview {
+  margin: 15px 0;
+}
+
+.play-btn {
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .movie-detail-area {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 영화 포스터 */
+    .movie-poster {
+      width: 70%;
+      margin: 0 auto;    
+    }
+
+    /* 영화 정보 */
+    .Movie-items {
+      margin-right: 30px;
+    }
+
 }

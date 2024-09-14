@@ -1,19 +1,3 @@
-// import { useQuery } from "@tanstack/react-query";
-// import api from "../utils/api";
-
-// const fetchMovieDetail = (id) => {
-//     return api.get(`/movie/${movie.id}`)
-// }
-
-// export const useMovieDetailQuery = () => {
-//     return useQuery({
-//         queryKey: ['movie-detail',id],
-//         queryFn: fetchMovieDetail,
-//         select: (result) => result.data,
-//         staleTime: 300000, //5분
-//     });
-// };
-
 import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 

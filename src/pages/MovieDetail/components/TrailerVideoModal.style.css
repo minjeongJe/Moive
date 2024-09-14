@@ -1,3 +1,6 @@
+
+
+/* 영화 예고편 모달 */
 .youtube-video-container {
     width: 100%;  /* 모달 창의 너비에 맞춤 */
     aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
@@ -15,6 +18,3 @@
     height: 100% !important;
 }
 
-.no-trailer {
-    color: black;
-}
